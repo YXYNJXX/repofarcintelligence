@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Depression</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-in;
+        }
+
+        header {
+            background: linear-gradient(90deg, #8B0000, #B22222, #DC143C, #FF4500);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            animation: slideInFromLeft 1s ease-out;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffcc00;
+            color: #00274d;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 2rem;
+            background: #fff;
+            margin: 2rem auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            color: linear-gradient(90deg, #8B0000, #B22222, #DC143C, #FF4500);
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            background: linear-gradient(90deg, #8B0000, #B22222, #DC143C, #FF4500); /* Change background to red gradient */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #B22222, #DC143C, #FF4500, #FF6347); /* Adjust hover background */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(90deg, #8B0000, #B22222, #DC143C, #FF4500); /* Change background to red gradient */
+            color: #fff;
+            margin-top: auto;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(90deg, #8B0000, #B22222, #DC143C, #FF4500); /* Change background to red gradient */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+
+        .scroll-to-top:hover {
+            background: linear-gradient(90deg, #B22222, #DC143C, #FF4500, #FF6347); /* Adjust hover background */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Arcadian Intelligence Portal - The Great Depression</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>The Great Depression was a severe worldwide economic depression that took place mostly during the 1930s, beginning in the United States. It was the longest-lasting economic downturn in the history of the Western industrialized world.</p>
+            <p>Explore our site to learn more about the causes, effects, and key events of this significant period in history.</p>
+            <div class="image-container">
+                <img src="https://cdn.theatlantic.com/thumbor/osgvrD2YznoeaYHKZjaLz-B3KlQ=/26x114:1012x669/960x540/media/img/mt/2020/05/8a04701v/original.jpg" alt="Introduction Image">
+            </div>
+        </section>
+        <button onclick="location.href='../components/header.html'" id="back-to-header">Go to Header Page</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 Arcadian Intelligence Wikipedia. All rights reserved by Imperial Union Government of Republic of Arcadia.</p>
+    </footer>
+    <button class="scroll-to-top" id="scrollToTopBtn">Top</button>
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: -2, behavior: 'smooth' });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('loggedIn')) {
+                window.location.href = '../components/header.html';
+            }
+        });
+    </script>
+</body>
+</html>

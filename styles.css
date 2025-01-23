@@ -1,0 +1,117 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+header {
+    background: linear-gradient(135deg, #0c76b8, #0a5a8a);
+    background-size: 200% 200%;
+    animation: waterFlow 10s infinite linear;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes waterFlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+nav {
+    margin: 20px 0;
+    background: #0c76b8;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: #e8491d;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #35424a;
+    font-family: 'Georgia', serif;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeline li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #0c76b8;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline li:nth-child(even) {
+    background: #e9ecef;
+    border-left: 5px solid #e8491d;
+}
+
+aside ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+aside ul li::before {
+    content: '>';
+    position: absolute;
+    left: -20px;
+    transition: transform 0.3s ease;
+}
+
+aside ul li.open::before {
+    transform: rotate(90deg);
+}
+
+aside ul ul {
+    display: none;
+    padding-left: 20px;
+}
+
+aside ul li.open > ul {
+    display: block;
+}
+
+* {
+    font-family: 'Times New Roman', serif !important;
+}

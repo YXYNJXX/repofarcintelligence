@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Great Depression</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: #333;
+            font-family: 'Times New Roman', serif;
+            line-height: 1.8;
+        }
+        header {
+            background: linear-gradient(90deg, #8B0000, #B22222, #DC143C, #FF4500);
+            color: white; /* Change text color to white */
+            padding: 30px;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header div {
+            margin-top: 40px; /* Increase top margin */
+        }
+        header div div {
+            margin-top: -20px; /* Adjust position of "The Great Depression" */
+        }
+        header button {
+            top: -30px; /* Adjust position of "Sign Out" button further up */
+        }
+        main {
+            display: flex;
+            flex-direction: row;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 0 15px;
+            gap: 20px;
+        }
+        aside {
+            width: 25%;
+            max-width: 300px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        aside h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.7em;
+            color: red; /* Change text color to red */
+            margin-bottom: 15px;
+            border-bottom: 2px solid grey; /* Change border color to grey */
+            padding-bottom: 5px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+        aside ul li::before {
+            content: '\2192'; /* Arrow character */
+            position: absolute;
+            left: 0;
+            color: #004d7a;
+            font-size: 1.2em;
+        }
+        aside ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black; /* Change text color to black */
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        aside ul li a:hover {
+            color: #004d7a;
+        }
+        aside .quick-facts, aside .quiz-section {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 2px solid #ddd;
+        }
+        aside .quick-facts h3, aside .quiz-section h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.5em;
+            color: red; /* Change text color to red */
+            margin-bottom: 10px;
+        }
+        aside .quick-facts ul {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+        }
+        aside .quiz-section ul {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+        }
+        article {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        article h1, article h2 {
+            color: red; /* Change text color to red */
+        }
+        article h1 {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            border-bottom: 2px solid red; /* Change border color to red */
+            padding-bottom: 10px;
+        }
+        article h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        section img {
+            float: right;
+            margin: 0 0 15px 15px;
+            max-width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .image-caption {
+            font-size: 0.9em;
+            color: #666;
+            text-align: right;
+            margin-top: -10px;
+        }
+        ul.bullets {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        .highlight {
+            font-weight: bold;
+            color: black;
+        }
+        .important-sentence {
+            text-decoration: underline;
+            text-decoration-color: #1060af;
+            color: #1060af;
+        }
+        .go-back {
+            margin-top: 30px;
+            display: inline-block;
+            background: linear-gradient(90deg, #8B0000, #B22222, #DC143C, #FF4500);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        .go-back:hover {
+            background: linear-gradient(90deg, #B22222, #DC143C, #FF4500, #FF6347);
+        }
+        footer {
+            background: linear-gradient(90deg, #8B0000, #B22222, #DC143C, #FF4500);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 1.2em;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+            <div style="margin-top: -20px; position: absolute; left: 50%; transform: translateX(-50%);">The Great Depression</div>
+            <button onclick="signOut()" style="padding: 10px; background-color: #e8491d; color: white; border: none; border-radius: 5px; cursor: pointer; position: absolute; right: 0; top: 1;">Sign Out</button>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#causes">Causes of the Great Depression</a></li>
+                <li><a href="#economic-impacts">Economic Impacts</a></li>
+                <li><a href="#government-response">Government Response: The New Deal</a></li>
+                <li><a href="#life-during-depression">Life During the Depression</a></li>
+                <li><a href="#global-impact">The Global Impact of the Depression</a></li>
+                <li><a href="#legacy-of-the-great-depression">Legacy of the Great Depression</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+            <div class="quick-facts">
+                <h3>Quick Facts</h3>
+                <ul>
+                    <li><strong>Date:</strong> <span class="highlight">1929 - 1939</span></li>
+                    <li><strong>Location:</strong> <span class="highlight">Europe, United States</span></li>
+                    <li><strong>Key People:</strong> <span class="highlight">Herbert Hoover, Franklin D. Roosevelt</span></li>
+                    <li><strong>Context:</strong> <span class="highlight">Hitler, International Trade</span></li>
+                </ul>
+            </div>
+            <div class="quiz-section">
+                <h3>Take the Quiz</h3>
+                <ul>
+                    <li><a href="#">Quiz 1: What do you know about the Great Depression?</a></li>
+                    <li><a href="#">Quiz 2: Key Figures and Policies</a></li>
+                    <li><a href="#">Quiz 3: Global Impact</a></li>
+                </ul>
+            </div>
+        </aside>
+        <article>
+            <h1>About the Great Depression</h1>
+            <section id="introduction">
+                <h2>1. Introduction</h2>
+                <img src="https://cdn.britannica.com/25/187725-050-0272F112/men-line-food-Chicago-Great-Depression-Illinois.jpg" alt="Introduction Image" style="width: 100%; max-width: 300px;">
+                <p>The Great Depression started from 1929 to 1941, and still remains one of the most significant economic downfalls in American history. Established from a series of economic imbalances and the stock market crash of October 1929, it led to extreme unemployment, poverty, and social upheaval. This section provided the information of causes, impacts, and government interventions during the Great Depression.</p>
+            </section>
+            <section id="causes">
+                <h2>2. Causes of the Great Depression</h2>
+                <img src="https://cdn.britannica.com/45/197245-050-3C1D59B4/Depositors-American-Union-Bank-New-York-York-1932.jpg" alt="Causes Image 1" style="width: 100%; max-width: 300px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/US_Unemployment_from_1910-1960.svg/2560px-US_Unemployment_from_1910-1960.svg.png" alt="Causes Image 2" style="width: 100%; max-width: 300px;">
+                <ul class="bullets">
+                    <li><strong>Stock Market Crash of 1929:</strong> The stock market crash in October 1929, established on October 24th of Black Thursday and October 29th of Black Tuesday, started a chain reaction that destabilized the American economy. 16 million shares were sold on Black Thursday which wiped out billions of dollars. Speculative investments, purchasing on margin, and the lack of the regulation has led to the financial crisis in the end.</li>
+                    <li><strong>Economic Imbalances:</strong> Despite economic growth during the 1920s, the inequality of income was extreme. Even though the industrial workers saw potential improvements, wages have failed to keep pace with the economic expansion. Wealth was concentrated among a small percentile of Americans, causing the majority unable to afford goods and services that were necessary for living.</li>
+                    <li><strong>Overproduction and Underconsumption:</strong> The farmers and factories produced goods faster than they could be consumed, causing oversupply in a sharp decline in prices, leaving producers with unsold, remaining inventories and plummeting profits.</li>
+                    <li><strong>Dependence on Credit:</strong> Credit became a lifeline for American consumers and businesses during the 1920s. Installment buying allowed consumers to purchase goods they could not afford, causing mounting personal and corporate debt.</li>
+                    <li><strong>Environmental Disasters:</strong> Natural disasters such as the Dust Bowl deteriorated the struggles of rural farmers. Severe droughts and unsustainable farming methods left much of the Great Plains barren, forcing multiple families to abandon their farms.</li>
+                </ul>
+            </section>
+            <section id="economic-impacts">
+                <h2>3. Economic Impacts</h2>
+                <img src="https://www.federalreservehistory.org/-/media/images/essays/great_depression/banking_panics_1930_31_2.jpg" alt="Economic Impacts Image" style="width: 100%; max-width: 300px;">
+                <ul class="bullets">
+                    <li><strong>Bank Failures:</strong> Between 1929 and 1931, multiple banks failed as panicked depositors withdrew their savings. Without the federal insurance for deposits, many Americans lost their life savings.</li>
+                    <li><strong>Unemployment:</strong> By 1933, unemployment had soared to 25% or more, leaving millions without a source of income. Even those who retained their jobs have faced significant wage cuts and reduced hours of working.</li>
+                    <li><strong>Homelessness and Poverty:</strong> Since people were unable to afford housing, many families were forced into makeshift shelters in shantytowns called “Hoovervilles.” This community has become symbols of the widespread economic despair as well.</li>
+                </ul>
+            </section>
+            <section id="government-response">
+                <h2>4. Government Response: The New Deal</h2>
+                <img src="https://cdn.britannica.com/32/134332-050-646C27B1/Franklin-D-Roosevelt-Henry-Wallace-farm-relief-bill-1933.jpg" alt="Government Response Image" style="width: 100%; max-width: 300px;">
+                <ul class="bullets">
+                    <li><strong>Relief Programs:</strong> President Franklin D. Roosevelt, also known as FDR, launched the New Deal to provide immediate relief to struggling Americans. Programs such as Civilian Conservation Corps (CCC) and Federal Emergency Relief Administration (FERA) created jobs and provided direct aid to the citizens.</li>
+                    <li><strong>Economic Recovery Initiatives:</strong> The Agricultural Adjustment Act (AAA) addressed oversupply by encouraging farmers to reduce production. The Tennessee Valley Authority (TVA) transformed the Tennessee Valley by regulating floods and generating electricity, boosting rural economies.</li>
+                    <li><strong>Structural Reforms:</strong> In order to stabilize the financial system, the New Deal introduced regulations such as creating the Federal Deposit Insurance Corporation (FDIC) to protect the bank deposits.</li>
+                    <li><strong>Social Security Act:</strong> In 1935, Roosevelt introduced the Social Security Act, establishing pensions for retirees, unemployment insurance, and support for vulnerable populations. This legislation laid the foundation for America’s modern welfare state.</li>
+                </ul>
+            </section>
+            <section id="life-during-depression">
+                <h2>5. Life During the Depression</h2>
+                <img src="https://media.npr.org/assets/img/2020/07/21/gettyimages-3316830-8c335988d11a5fa823b4d1c07267046bb0c942af.jpg" alt="Life During the Depression Image 1" style="width: 100%; max-width: 300px;">
+                <img src="https://bloximages.newyork1.vip.townnews.com/lancasterfarming.com/content/tncms/assets/v3/editorial/f/70/f70bae7a-eea5-11ed-ac84-5b5957ff99e2/645aa96a02de8.image.jpg?resize=1396%2C1381" alt="Life During the Depression Image 2" style="width: 100%; max-width: 300px;">
+                <img src="https://i0.wp.com/www.historyplace.com/unitedstates/lange/dor12-118.jpg" alt="Life During the Depression Image 3" style="width: 100%; max-width: 300px;">
+                <ul class="bullets">
+                    <li><strong>Urban Struggles:</strong> Urban centers were not spared from hardship as well. Breadlines became common as millions relied on charity to survive. Public and private aid programs sought to alleviate the suffering, yet resources were often extremely insufficient.</li>
+                    <li><strong>Cultural Adaptations:</strong> Despite the challenges, the 1930s saw a surge in popular culture, with radio programs, movies, and musics which offered an escape from daily struggles. New Deal programs such as the Works Progress Administration (WPA) supported artists, writers, and performers, preserving the American dream and culture while creating the jobs.</li>
+                </ul>
+            </section>
+            <section id="global-impact">
+                <h2>6. The Global Impact of the Depression</h2>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Graph_charting_income_per_capita_throughout_the_Great_Depression.svg/2560px-Graph_charting_income_per_capita_throughout_the_Great_Depression.svg.png" alt="Global Impact Image" style="width: 100%; max-width: 300px;">
+                <p>The Great Depression was not confined to the United States of America. Economic downfall spread internationally, exacerbated by reduced global trade and debt repayment crises. Germany, especially burdended by World War I reparations, experienced severe economic and political instability, paying the way for the rise of fascism.</p>
+            </section>
+            <section id="legacy-of-the-great-depression">
+                <h2>7. Legacy of the Great Depression</h2>
+                <ul class="bullets">
+                    <li><strong>Economic Policy Shifts:</strong> The New Deal fundamentally changed the role of the federal government in the  American economy. It was the first time when the government took active responsibility for socio-stabiization of economy and providing a safety net for their citizens.</li>
+                    <li><strong>Social Reforms:</strong> The Social Security Act, labor unions, infrastructure improvements and even more established during the New Deal continue to shape American economy today.</li>
+                    <li><strong>Potential Future Lesson:</strong> The Great Depression emphasized the dangers of economic inequality, overreliance on credit, and lack of financial regulation. The lessons remain relevant as policymakers navigate modern economic movement and challenges.</li>
+                </ul>
+            </section>
+            <section id="conclusion">
+                <h2>8. Conclusion</h2>
+                <p>The Great Depression was a transformative period in American history. It exposed the vulnerabilities of unregulated capitalism, experimented the resilience of the Americans, and redeifned the role of a government. The policies and programs of the New Deal not only addressed immediate needs, yet it also  laid the groundwork for a more fair and stable economy.</p>
+            </section>
+            <a href="../components/header.html" class="go-back">Go Back to Header Page</a>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 Arcadian Intelligence Wikipedia. All rights reserved by Imperial Union Government of Republic of Arcadia.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('loggedIn')) {
+                window.location.href = '../components/header.html';
+            }
+        });
+
+        function signOut() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = '../components/header.html';
+        }
+    </script>
+</body>
+</html>

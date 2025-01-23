@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Depression</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background: #fff; /* White background */
+            color: #930606; /* Darker red for text */
+            line-height: 1.6;
+            overflow: auto; /* Enable scrolling */
+        }
+        #login-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 50%; /* Adjusted width */
+            height: 50%; /* Adjusted height */
+            background: linear-gradient(135deg, #8B0000, #B22222, #DC143C, #FF4500); /* Red gradient background */
+            color: #fff;
+            z-index: 1000;
+            opacity: 1;
+            animation: fadeIn 1s forwards;
+            text-align: center;
+            margin: auto; /* Center the login screen */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+        #login-screen img {
+            width: 200px; /* Adjust as needed */
+            height: auto;
+            margin-bottom: 20px;
+            object-fit: contain; /* Ensures the logo fits without distortion */
+            display: block;
+        }
+        #login-screen.hide {
+            animation: fadeOut 1s forwards;
+        }
+        #login-screen h2 {
+            font-size: 3em; /* Adjusted font size */
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff; /* White text */
+        }
+        #login-screen input {
+            margin: 15px 0;
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            outline: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: #930606; /* Darker red for input text */
+        }
+        #login-screen input:focus {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        #login-screen button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background: linear-gradient(135deg, #8B0000, #B22222, #DC143C, #FF4500); /* Red gradient */
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            animation: moveGradient 3s infinite;
+        }
+        @keyframes moveGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #8B0000, #B22222, #DC143C, #FF4500); /* Red gradient background */
+            z-index: 999;
+            opacity: 1;
+            animation: fadeIn 1s forwards;
+        }
+        #overlay.hide {
+            animation: fadeOut 1s forwards;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #8B0000, #B22222, #DC143C, #FF4500); /* Red gradient background */
+            color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            background: linear-gradient(135deg, #8B0000, #B22222, #DC143C, #FF4500); /* Red gradient background */
+            -webkit-background-clip: text;
+            color: #fff; /* White text */
+        }
+        nav ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: #fff; /* Change to white */
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ff0000;
+            color: #930606; /* Darker red */
+            border-radius: 5px;
+        }
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            color: #ff0000; /* Bright red */
+        }
+        main p {
+            margin: 15px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px; /* Smaller padding */
+            background: linear-gradient(135deg, #8B0000, #B22222, #DC143C, #FF4500); /* Red gradient background */
+            color: #fff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            color: #fff; /* White text */
+        }
+        footer .quote {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #fff; /* White text */
+        }
+        footer h1 {
+            display: none; /* Hide the h1 element in the footer */
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+    <script>
+        function checkLogin() {
+            const id = document.getElementById('id').value;
+            const password = document.getElementById('password').value;
+            if (id === 'Nikki Matias' && password === '1234') {
+                document.getElementById('login-screen').classList.add('hide');
+                document.getElementById('overlay').classList.add('hide');
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+                localStorage.setItem('loggedIn', 'true');
+                setTimeout(() => {
+                    document.getElementById('login-screen').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none';
+                }, 1000); // Wait for animation to complete
+            } else {
+                alert('Invalid ID or Password');
+            }
+        }
+
+        function checkLoggedInStatus() {
+            if (!localStorage.getItem('loggedIn')) {
+                document.getElementById('login-screen').style.display = 'flex';
+                document.getElementById('overlay').style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        }
+
+        function signOut() {
+            localStorage.removeItem('loggedIn');
+            location.reload();
+        }
+
+        document.addEventListener('DOMContentLoaded', checkLoggedInStatus);
+    </script>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="login-screen">
+        <img src="../images/Untitled design (2).png" alt="Logo"> <!-- Replace "your-logo.png" with your image path -->
+        <h2>Welcome to Republic of Arcadia Intelligence Portal</h2>
+        <input type="text" id="id" placeholder="Enter ID">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="checkLogin()">Login</button>
+    </div>
+    <header>
+        <h1>The Great Depression</h1>
+        <nav>
+            <ul>
+                <li><a href="../pages/index.html">Home</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/timeline.html">Timeline</a></li>
+            </ul>
+        </nav>
+        <button onclick="signOut()" style="padding: 10px; background-color: #e8491d; color: white; border: none; border-radius: 5px; cursor: pointer;">Sign Out</button>
+    </header>
+    <main>
+        <h2>Introduction</h2>
+        <p>The Great Depression was a severe worldwide economic depression that took place mostly during the 1930s, beginning in the United States. The timing of the Great Depression varied across nations; in most countries, it started in 1929 and lasted until the late 1930s.</p>
+        <h2>Causes</h2>
+        <p>There were multiple causes for the Great Depression, including the stock market crash of 1929, bank failures, and a reduction in purchasing across the board.</p>
+        <h2>Impact</h2>
+        <p>The Great Depression had devastating effects in countries both rich and poor. Personal income, tax revenue, profits, and prices dropped, while international trade plunged by more than 50%.</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Arcadian Intelligence Wikipedia. All rights reserved by Imperial Union Government of Republic of Arcadia.</p>
+    </footer>
+</body>
+</html>
+

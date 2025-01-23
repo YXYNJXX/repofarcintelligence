@@ -1,0 +1,23 @@
+{
+  "name": "great-depression-website",
+  "version": "1.0.0",
+  "description": "A visually appealing website teaching about the Great Depression.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build script not defined'",
+    "test": "echo 'Test script not defined'"
+  },
+  "keywords": [
+    "Great Depression",
+    "history",
+    "education",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
